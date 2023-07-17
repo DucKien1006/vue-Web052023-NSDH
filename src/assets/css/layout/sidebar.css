@@ -1,0 +1,135 @@
+.m-sidebar-header{
+    display: flex;
+    height: 56px;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-header-menu-icon{
+    background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -428px -92px;
+    width: 16px;
+    height: 16px;
+}
+
+.m-header-logo-icon{
+    background-image: url("@/assets/icon/Logo.svg");
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 32px;
+    background-size: cover;
+}
+
+.m-btn-add-new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 124px;
+    height: 28px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    column-gap: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+.m-sidebar-btn{
+    display: flex;
+    width: 100%;
+    margin-top: 4px;
+    justify-content: center;
+}
+
+.m-btn-add-new span{
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    font-family: MISAFont;
+}
+.m-btn-add-new div{
+    background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -34px -314px;
+	width: 12px;
+	height: 12px;
+}
+.sidebar-menu{
+    margin-top: 12px;
+    overflow: hidden overlay;
+    margin-bottom: 8px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb
+{
+	border-radius: var(--border-radius-4);
+    background-color: #b4b4b445;
+}
+
+.sidebar-menu::-webkit-scrollbar
+{
+    display: none;
+	width: 8px;
+	background: none;
+}
+
+.m-app-sidebar-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu:hover.sidebar-menu::-webkit-scrollbar{
+    display: block;
+}
+
+.sidebar-footer{
+    height: 44px;
+    width: 100%;
+    border-top: 1px solid #213553;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+.sidebar-footer:hover{
+    color: #fff;
+}
+
+.m-app-sidebar-item{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    height: 38px;
+    cursor: pointer;
+    padding: 0 14px;
+}
+
+.m-app-sidebar-item:hover{
+    background-color: #616164
+}
+
+.m-app-sidebar-item:hover .m-app-sidebar-item-name{
+    color: var(--white-color);
+}
+
+.m-app-sidebar-item:hover .m-app-sidebar-icon{
+    background-color: var(--white-color);
+}
+
+.m-app-sidebar-box-icon{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-app-sidebar-icon{
+    background-color: #a8a8a8;
+}
+
+.m-app-sidebar-item-name{
+    font-family: MisaFont;
+    font-size: 13px;
+    color: #fff;
+    user-select: none;
+}

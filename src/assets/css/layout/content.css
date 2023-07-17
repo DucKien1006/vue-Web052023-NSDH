@@ -1,0 +1,238 @@
+.m-app-content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	width: 100%;
+	height: calc(100% - 58px);
+	background-color: var(--content-bgc);
+	padding: 16px 24px 24px;
+}
+
+.m-app-content-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.m-app-content-title {
+	font-family: MisaFontBold;
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--title-primary-color);
+}
+
+.m-app-content-add {
+	display: flex;
+	column-gap: 12px;
+}
+
+.m-content-body {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+	height: calc(100% - 52px);
+	background-color: var(--white-color);
+	border-radius: var(--border-radius-4);
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.039);
+}
+
+.m-content-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 16px;
+}
+
+.m-refresh {
+	background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -1098px -90px;
+	width: 20px;
+	height: 21px;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.m-excel {
+	background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -1265px -90px;
+	width: 23px;
+	height: 20px;
+	opacity: 0.6;
+	display: block;
+	cursor: pointer;
+}
+
+.m-setting {
+	background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -1378px -89px;
+	width: 20px;
+	height: 22px;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.m-refresh:hover,
+.m-setting:hover,
+.m-excel:hover {
+	opacity: 1;
+}
+
+.m-content-nav-right {
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+}
+
+.m-content-nav-left {
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+}
+
+.m-content-data-table {
+	overflow: scroll;
+	scroll-behavior: smooth;
+	flex: 1;
+}
+
+/* .m-content-data-table::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: #c9ccd0d7;
+}
+
+.m-content-data-table::-webkit-scrollbar-thumb {
+	background-color: #c9ccd0d7;
+} 
+
+.m-content-data-table::-webkit-scrollbar-thumb:hover {
+	background-color: #a6a9af;
+}
+
+.m-content-data-table::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+}  */
+
+.m-content-container {
+	display: flex;
+	height: calc(100% - 48px);
+	column-gap: 16px;
+}
+
+.m-content-right {
+	display: none;
+	width: 220px;
+	height: 100%;
+	background-color: #fff;
+}
+
+.m-paging {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-color: #f5f5f5;
+	height: 48px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.m-paging-left {
+	font-size: 14px;
+	display: flex;
+	column-gap: 4px;
+}
+
+.m-paging-right {
+	display: flex;
+	align-items: center;
+	column-gap: 16px;
+}
+
+.m-paging-text {
+	font-size: 14px;
+}
+
+.m-paging-arrow {
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+}
+
+.word-medium {
+	font-family: MisaFontBold;
+}
+
+.m-multi-func {
+	display: flex;
+	border: 1px solid var(--border-color);
+	border-radius: 3px;
+	height: 28px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	cursor: pointer;
+	column-gap: 6px;
+	user-select: none;
+}
+
+.m-multi-func:active {
+	background-color: #d2d3d6;
+}
+
+.m-multi-func span {
+	font-size: 13px;
+	font-family: MISAFontMedium;
+}
+
+.m-multi-func .icon {
+	background: url(@/assets/icon/Sprites.64af8f61.svg) no-repeat -560px -359px;
+	width: 16px;
+	height: 16px;
+}
+
+.m-multi-func .list-func {
+	position: absolute;
+	display: block;
+	right: 0;
+	top: calc(100% + 4px);
+	width: 60%;
+	z-index: 10;
+	background-color: #fff;
+	border: 1px solid #babec5;
+	padding: 4px 0;
+	border-radius: 2px;
+	animation: up linear 0.1s;
+}
+
+@keyframes up {
+	0% {
+		transform: translateY(8%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.list-func .list-func-item {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	padding: 0 8px;
+}
+
+.list-func .list-func-item:hover {
+	color: var(--primary-color);
+	background-color: #d2d3d6;
+}
+
+.disable-multi-func {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.disable-multi-func:hover {
+	background-color: #fff;
+}

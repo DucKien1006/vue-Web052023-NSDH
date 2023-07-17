@@ -1,0 +1,99 @@
+.m-app-header{
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;
+    box-shadow: 0 0 3px rgba(23,27,42,0.059);
+    background-color: #fff;
+}
+
+.m-header-logo{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.m-header-cbb{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    cursor: pointer;
+}
+
+.m-header-cbb .option{
+    background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -847px -35px;
+	width: 16px;
+	height: 14px;
+}
+
+.down-icon{
+    background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -84px -361px;
+	width: 8px;
+	height: 14px;
+    transform: rotate(90deg);
+}
+
+.m-header-cbb span{
+    display: block;
+    font-size: 14px;
+    font-family: MISAFontMedium;
+    color: #111111;
+}
+
+.m-header-logo-name{
+    font-size: 20px;
+    font-family: MisaFontBold;
+    margin-right: 40px;
+    color: var(--title-primary-color);
+}
+
+.m-header-control{
+    display: flex;
+    align-items: center;
+    /* column-gap: 22px; */
+    height: 100%;
+    width: max-content;
+}
+.right__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+.sprite1 {
+    background: url('@/assets/icon/Sprites.64af8f61.svg') no-repeat -788px -30px;
+    width: 22px;
+    height: 25px;
+    cursor: pointer;
+}
+.sprite2 {
+    background: url('@/assets/icon/Sprites.64af8f61.svg') no-repeat -89px -145px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.sprite3 {
+    /* background: url('@/assets/icon/Sprites.64af8f61.svg') no-repeat -984px -145px; */
+    /* background: url('@/assets/font/fontawesome-5.15.1/svgs/solid/book-open.svg') no-repeat; */
+    width: 23px;
+    height: 22px;
+    cursor: pointer;
+}
+.sprite4 {
+    background: url('@/assets/icon/Sprites.64af8f61.svg') no-repeat -33px -144px;
+    width: 23px;
+    height: 24px;
+    cursor: pointer;
+}
+.avatar img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.header-right__user--name{
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 8px;
+}

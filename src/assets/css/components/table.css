@@ -1,0 +1,225 @@
+.m-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    white-space: nowrap;
+}
+
+.m-table thead tr {
+    position: sticky;
+    border: none;
+    top: 0;
+    z-index: 2;
+    height: 36px;
+}
+
+.m-table-row {
+    height: 36px;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.m-table-row th {
+    background-color: #e5e8ec;
+    height: 36px;
+    font-size: 13px !important;
+}
+/* .m-table-row th:hover{
+    background-color: unset !important;
+} */
+
+.m-table-row th.m-table-cell {
+    font-size: 13px;
+    font-family: MISAFontBold;
+}
+
+tbody .m-table-row:hover .m-table-cell {
+    background-color: #f2f9ff !important;
+}
+
+.m-table-cell {
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px dotted #c7c7c7;
+    padding: 0 10px;
+    font-size: 13px;
+    font-family: MISAFont;
+}
+
+td.m-table-cell{
+    background-color: #fff;
+}
+
+.table-left {
+    text-align: left;
+}
+
+.table-center {
+    text-align: center;
+    padding: 0 16px;
+}
+
+.table-right {
+    text-align: right;
+    padding-right: 16px;
+}
+
+.m-table-checkbox {
+    display: flex;
+    justify-content: center;
+}
+
+.m-selected {
+    background-color: rgba(80, 184, 60, 0.1);
+}
+
+.m-table-cell-checkbox {
+    min-width: fit-content !important;
+}
+
+.m-checkbox-sticky-left {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    min-width: 50px;
+}
+
+.m-sticky-name-left {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 53px;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    border-right: 1px dotted #c7c7c7;
+}
+
+.m-row-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 120px;
+    height: 36px;
+    position: sticky;
+    position: -webkit-sticky;
+    right: 0;
+    z-index: 1;
+    border-left: 1px dotted #c7c7c7;
+    padding-right: 24px;
+}
+
+.table-option {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    cursor: pointer;
+}
+
+.edit-option {
+    font-family: MisaFontBold;
+    font-size: 13px;
+    color: #0075c0;
+    cursor: pointer;
+}
+
+.edit-select-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.edit-select-icon {
+    background: url("@/assets/icon/Sprites.64af8f61.svg") no-repeat -896px -359px;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+tbody .m-row-option {
+    background-color: #fff;
+    column-gap: 4px;
+}
+
+.option-list {
+    padding: 2px 0;
+    position: absolute;
+    background-color: #fff;
+    width: fit-content;
+    text-align: left;
+    border-radius: 2px;
+    box-shadow: 0 4px 16px rgba(23, 27, 42, 0.24);
+    z-index: 9;
+    border: 1px solid #babec5;
+}
+
+.option-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.option-item:hover {
+    color: var(--primary-color);
+    background-color: #d2d3d6;
+}
+
+.option-list-up {
+    bottom: 116%;
+}
+
+.option-list-up::before {
+    border-color: #fff transparent transparent transparent;
+    bottom: -12px;
+}
+
+.option-list-down {
+    top: 114%;
+}
+
+.option-list-down::before {
+    top: -12px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.row-selected .m-table-cell{
+    background-color: #e5f3ff !important;
+}
+
+.table-no-data {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+
+.th-col {
+    position: relative;
+}
+
+.th-col:hover .col-filter {
+    display: block;
+}
+
+.col-filter {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    background: url("@/assets/icon/Sprites.4b10a131.svg") no-repeat -1687px -564px;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    cursor: pointer;
+}

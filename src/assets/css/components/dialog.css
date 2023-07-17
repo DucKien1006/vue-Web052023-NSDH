@@ -1,0 +1,41 @@
+.m-dialog-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    border-radius: var(--border-radius-4);
+    width: 400px;
+    padding: 24px;
+}
+
+.dialog-header{
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dialog-title{
+    font-size: 24px;
+    font-family: MisaFontBold;
+    color: #1F1F1F; 
+}
+
+.dialog-description{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+.dialog-action{
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dialog-action-right{
+    display: flex;
+    column-gap: 8px;
+}

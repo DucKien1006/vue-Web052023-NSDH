@@ -1,0 +1,148 @@
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    row-gap: 6px;
+}
+
+.input-lable {
+    font-family: MisaFontBold;
+    font-size: 13px;
+}
+
+.input-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.input-text {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 8px;
+    color: #1f1f1f;
+    font-size: 13px;
+    box-sizing: border-box;
+    flex: 1;
+    border-radius: 3px;
+    border: 1px solid #babec5;
+}
+
+.input-text:focus {
+    border: 1px solid #2ca01c;
+}
+
+.input-text::placeholder {
+    color: #999999;
+    font-size: 13px;
+    font-family: MisaFontItalic;
+}
+
+.input-with-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 36px;
+    background-image: url("@/assets/icon/search.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.input-with-search ~ .input-text {
+    padding-right: 36px !important;
+}
+.input-wrapper:hover ~ .input-error-message{
+    display: inline-block !important;
+}
+.input-error-message {
+    display: none;
+    background-color: #4d4d4d;
+    font-family: MISAFont;
+    padding: 4px 10px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: #ffffff;
+    z-index: 100;
+    font-size: 11px;
+    border-radius: 2px;
+}
+
+.active-focus {
+    border: 1px solid #50b83c;
+}
+
+.isError input {
+    border: 1px solid #e61d1d !important;
+}
+
+.isError input:focus {
+    border: 1px solid #e61d1d !important;
+    border-radius: 3px;
+}
+
+.isSearch {
+    display: block;
+}
+
+.isTextField {
+    display: block;
+}
+
+.isRequired {
+    color: #e61d1d;
+}
+
+.ms-input-checkbox {
+    display: block;
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #8d9096;
+    border-radius: 2px;
+    position: relative;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.ms-input-checkbox::after {
+    content: "";
+    background: url(@/assets/icon/Sprites.4b10a131.svg) no-repeat -1225px -363px;
+    width: 14px;
+    height: 11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.ms-input-checkbox:checked {
+    border: 1px solid #2ca01c;
+    background-color: #fff;
+    animation: rotate linear 0.1s;
+}
+
+.ms-input-checkbox:checked::after {
+    display: block;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}

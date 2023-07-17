@@ -1,0 +1,78 @@
+@import url('./common/input.css');
+@import url('./common/icon.css');
+@import url('./layout/layout.css');
+
+
+:root{
+    /* Màu sắc */
+    --sidebar-bgc: #393a3d;
+    --sidebar-icon-text-color: #869AB8;
+    --content-bgc: #eceef1;
+    --primary-color: #2ca01c;
+    --primary-hover-color: #5dc748;
+    --primary-active-color: #118044;
+    --no-primary-color: #212121;
+    --text-color: #000;
+    --white-color: #fff;
+    --border-color: #E0E0E0;
+    --error-color: #FF4747;
+    --bg-popup-footer: #F5F5F5;
+    --action-color:#1F1F1F;
+    --input-hover-color: #e6e6e6;
+    --input-plh-color: #999999;
+    --title-primary-color: #1F1F20;
+    --border-color:#babec5 ;
+    /* Border */
+    --border-radius-4: 4px;
+    /* Chiều cao */
+    --height-btn-input: 36px;
+    /* Font-size */
+    --title-font-24: 24px;
+    --medium-font: MisaFontMedium;
+    --bold-font: MisaFontBold;
+    --sidebar-width: 180px;
+}
+
+body{
+    font-family: MisaFont;
+    font-size: 13px;
+}
+
+*{
+    font-family: MisaFont;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+@font-face {
+    font-family: MisaFont;
+    src: url('../assets/font/Noto_Sans/notosans-regular.2cb88a13.woff2');
+}
+
+@font-face {
+    font-family: MisaFontMedium;
+    src: url('../assets/font/Noto_Sans/notosans-semibold.df3e6dc4.woff2');
+}
+
+@font-face {
+    font-family: MisaFontBold;
+    src: url('../assets/font/Noto_Sans/notosans-bold.3ede5aff.woff2');
+}
+
+@font-face {
+    font-family: MisaFontItalic;
+    src: url('../assets/font/Noto_Sans/notosans-italic.1c1aaac9.woff2');
+}
+#app{
+    display: flex;
+    height: 100vh;
+    background-color: #eceef1;
+}

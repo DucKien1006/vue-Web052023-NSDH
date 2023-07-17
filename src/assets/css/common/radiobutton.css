@@ -1,0 +1,46 @@
+.misa-radio-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.misa-radio-group {
+    display: flex;
+    column-gap: 10px;
+}
+
+.misa-radio-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    column-gap: 6px;
+}
+
+.misa-radio-item:last-child {
+    margin-right: 0;
+}
+
+.misa-radio-group,
+.misa-label-field {
+    font-family: MISAFontBold;
+    font-size: 13px;
+}
+
+.misa-radio-item-out {
+    background: url("@/assets/icon/radio-no-active.png") no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+}
+
+.misa-radio-item-out:focus {
+    outline: 2px solid #b1b1b1;
+    border-radius: 50%;
+}
+
+.misa-radio-item-selected .misa-radio-item-in {
+    background: url("@/assets/icon/radio-button.png");
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+}
