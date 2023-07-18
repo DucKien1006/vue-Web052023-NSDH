@@ -7,16 +7,17 @@
             <div class="m-content-nav">
                 <div class="m-content-nav-left">
                     <div class="m-multi-func" :class="{
-                                            'disable-multi-func': listIdSelected.length < 2,
-                                        }" @click="() => {
-                        if (listIdSelected.length > 1)
-                            isShowActionMulti = !isShowActionMulti;
-                    }
-                        ">
+                        'disable-multi-func': listIdSelected.length < 2,
+                    }" @click="() => {
+    if (listIdSelected.length > 1)
+        isShowActionMulti = !isShowActionMulti;
+}
+    ">
                         <span>Thực hiện hàng loạt</span>
                         <div class="icon"></div>
                         <div v-if="listIdSelected.length > 1 && isShowActionMulti
-                                                    " class="list-func" v-click-outside="() => (isShowActionMulti = false)">
+                            " class="list-func"
+                            v-click-outside="() => (isShowActionMulti = false)">
                             <div class="list-func-item" @click="handleDeleteMulti">
                                 Xóa
                             </div>
@@ -24,14 +25,14 @@
                         </div>
                     </div>
                     <BaseFilterResult :filterResult="filters" @removeAllFilter="() => {
-                                            filters.length = 0;
-                                            loadData();
-                                        }
-                                            " @removeFilter="(index) => {
-                                filters.splice(index, 1);
-                                loadData();
-                            }
-                                "></BaseFilterResult>
+                        filters.length = 0;
+                        loadData();
+                    }
+                        " @removeFilter="(index) => {
+        filters.splice(index, 1);
+        loadData();
+    }
+        "></BaseFilterResult>
                 </div>
                 <div class="m-content-nav-right">
                     <Input width="230px" height="28px" placeholder="Tìm theo mã, tên nhân viên" v-model="keyword" isSearch
@@ -41,22 +42,22 @@
                     </Tippy>
                     <Tippy content="Xuất Excel" placement="bottom">
                         <a :href="'https://localhost:7166/api/v1/Employees/ExportExcel?keyword=' +
-                                                    keyword
-                                                    " target="_blank" class="m-excel"></a>
+                            keyword
+                            " target="_blank" class="m-excel"></a>
                     </Tippy>
                     <Tippy content="Tùy chỉnh giao diện" placement="bottom">
                         <div class="m-setting" @click="openSettingTable"></div>
                     </Tippy>
                     <BaseButtonMore :text="Resources.ButtonText.VI.Insert" :list-action-more="[
-                                            {
-                                                text: Resources.ButtonText.VI.InsertFromExcel,
-                                                click: Enum.ButtonMore.ImportExcel,
-                                            },
-                                        ]" @click-button="openFormEmloyeeToInsert" @click-more-item="(click) => {
-                        if (click === Enum.ButtonMore.ImportExcel)
-                            isShowImportExcel = true;
-                    }
-                        "></BaseButtonMore>
+                        {
+                            text: Resources.ButtonText.VI.InsertFromExcel,
+                            click: Enum.ButtonMore.ImportExcel,
+                        },
+                    ]" @click-button="openFormEmloyeeToInsert" @click-more-item="(click) => {
+    if (click === Enum.ButtonMore.ImportExcel)
+        isShowImportExcel = true;
+}
+    "></BaseButtonMore>
                 </div>
             </div>
             <!-- Data table -->
@@ -65,29 +66,29 @@
                 @handleUpdateItemRow="openFormEmloyeeToUpdate" @handleClickFilter="handleClickFilter"
                 @handleSetListId="(ids) => (listIdSelected = ids)" :loader="isLoading" :listIdSelected="listIdSelected"
                 @closeFilter="() => {
-                                    if (filters.length != 0) {
-                                        filters.length = 0;
-                                        loadData();
-                                    }
-                                }
-                                    ">
+                    if (filters.length != 0) {
+                        filters.length = 0;
+                        loadData();
+                    }
+                }
+                    ">
             </BaseTable>
             <div class="m-paging">
                 <div class="m-paging-left">
                     <span class="pagin-text">Tổng số:</span>
                     <span class="total-record word-medium">{{
-                                            totalRecord
-                                            }}</span>
+                        totalRecord
+                    }}</span>
                     <span class="pagin-text">bản ghi</span>
                 </div>
                 <div class="m-paging-right">
                     <BaseCombobox :width="200" :height="28" :data="[
-                                            { text: '10 bản ghi trên 1 trang', value: 10 },
-                                            { text: '20 bản ghi trên 1 trang', value: 20 },
-                                            { text: '30 bản ghi trên 1 trang', value: 30 },
-                                            { text: '50 bản ghi trên 1 trang', value: 50 },
-                                            { text: '100 bản ghi trên 1 trang', value: 100 },
-                                        ]" propValue="value" propName="text" disabled v-model="recordPerPage">
+                        { text: '10 bản ghi trên 1 trang', value: 10 },
+                        { text: '20 bản ghi trên 1 trang', value: 20 },
+                        { text: '30 bản ghi trên 1 trang', value: 30 },
+                        { text: '50 bản ghi trên 1 trang', value: 50 },
+                        { text: '100 bản ghi trên 1 trang', value: 100 },
+                    ]" propValue="value" propName="text" disabled v-model="recordPerPage">
                     </BaseCombobox>
                     <BasePaging :totalRecord="totalRecord" :totalPage="totalPage" v-model="currentPage"></BasePaging>
                 </div>
@@ -106,11 +107,7 @@
             @closeModalSetting="() => (isShowModalSetting = false)"></BaseSettingTable>
         <BaseToastMessage :type="typeToastMessage" :message="contentToastMessage" :isShowToast="isShowToastMessage"
             @hideToastMessage="hideToastMessage"></BaseToastMessage>
-        <ImportExcel v-if="isShowImportExcel" @closeImportExcel="() => {
-                    isShowImportExcel = false;
-                    loadData();
-                }
-                    "></ImportExcel>
+
     </teleport>
 </template>
 <script setup>

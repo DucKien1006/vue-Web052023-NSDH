@@ -84,49 +84,7 @@ const deleteMulti = (listId) => {
     return axiosAPI.post(`/Employees/Multi`, listId);
 };
 
-/**
- * Lấy danh sách các sheet trong file excel
- * @param {*} file
- * @returns
- */
-const getSheets = (file) => {
-    const formData = new FormData();
-    formData.append("file", file);
-    return axiosAPI.post(`/Employees/Import/Sheets`, formData, {
-        headers: {
-            "Content-Type": "multipart/form-data",
-        },
-    });
-};
 
-/**
- * Lấy danh sách tiêu đề các cột dựa theo index sheet và index dòng tiêu đề
- * @param {*} file
- * @param {*} sheetIndex
- * @param {*} rowHeader
- * @returns
- */
-const getCollumnsByHeader = (file, sheetIndex, rowHeader) => {
-    const formData = new FormData();
-    formData.append("file", file);
-    return axiosAPI.post(
-        `/Employees/Import/ColumnsByHeader?sheetSelected=${sheetIndex}&rowHeader=${rowHeader}`,
-        formData,
-        {
-            headers: {
-                "Content-Type": "multipart/form-data",
-            },
-        }
-    );
-};
-
-const importExcel = (file, data) => {
-    return axiosAPI.post(`/Employees/ImportExcel?map=${data}`, file, {
-        headers: {
-            "Content-Type": "multipart/form-data",
-        },
-    });
-};
 
 export {
     getEmployees,
@@ -138,8 +96,5 @@ export {
     getFilter,
     getFilterPaging,
     deleteMulti,
-    getSheets,
-    getCollumnsByHeader,
-    importExcel,
     insertMultiple
 };
